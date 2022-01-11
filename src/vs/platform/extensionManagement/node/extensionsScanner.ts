@@ -337,6 +337,7 @@ export class ExtensionsScanner extends Disposable {
 		local.identifier.uuid = metadata.id;
 		local.isMachineScoped = !!metadata.isMachineScoped;
 		local.isBuiltin = local.type === ExtensionType.System || !!metadata.isBuiltin;
+		local.releaseDate = metadata?.releaseDate
 	}
 
 	private async removeUninstalledExtensions(): Promise<void> {

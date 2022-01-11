@@ -263,6 +263,7 @@ export interface IGalleryMetadata {
 	id: string;
 	publisherId: string;
 	publisherDisplayName: string;
+	releaseDate?: number;
 }
 
 export interface ILocalExtension extends IExtension {
@@ -270,6 +271,7 @@ export interface ILocalExtension extends IExtension {
 	publisherId: string | null;
 	publisherDisplayName: string | null;
 	installedTimestamp?: number;
+	releaseDate?: number
 }
 
 export const enum SortBy {

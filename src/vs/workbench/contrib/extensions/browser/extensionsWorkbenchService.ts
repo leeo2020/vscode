@@ -200,6 +200,9 @@ class Extension implements IExtension {
 	}
 
 	get outdated(): boolean {
+		if (this.preview) {
+			return this.gallery?.releaseDate === this.local?.releaseDate
+		}
 		return !!this.gallery && this.type === ExtensionType.User && semver.gt(this.latestVersion, this.version);
 	}
 
