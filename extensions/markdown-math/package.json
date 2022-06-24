@@ -83,7 +83,7 @@
     "build-notebook": "node ./esbuild"
   },
   "dependencies": {
-    "@iktakahiro/markdown-it-katex": "git://github.com/mjbvz/markdown-it-katex.git"
+    "@iktakahiro/markdown-it-katex": "git@github.com:iktakahiro/markdown-it-katex.git"
   },
   "devDependencies": {
     "@types/markdown-it": "^0.0.0",
