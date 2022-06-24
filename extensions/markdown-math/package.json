@@ -23,14 +23,11 @@
   "browser": "./dist/browser/extension",
   "activationEvents": [],
   "contributes": {
-    "languages": [
-      {
-        "id": "markdown-math",
-        "aliases": []
-      }
-    ],
-    "grammars": [
-      {
+    "languages": [{
+      "id": "markdown-math",
+      "aliases": []
+    }],
+    "grammars": [{
         "language": "markdown-math",
         "scopeName": "text.html.markdown.math",
         "path": "./syntaxes/md-math.tmLanguage.json"
@@ -56,33 +53,29 @@
         }
       }
     ],
-    "notebookRenderer": [
-      {
-        "id": "markdownItRenderer-katex",
-        "displayName": "Markdown it KaTeX renderer",
-        "entrypoint": {
-          "extends": "markdownItRenderer",
-          "path": "./notebook-out/katex.js"
-        }
+    "notebookRenderer": [{
+      "id": "markdownItRenderer-katex",
+      "displayName": "Markdown it KaTeX renderer",
+      "entrypoint": {
+        "extends": "markdownItRenderer",
+        "path": "./notebook-out/katex.js"
       }
-    ],
+    }],
     "markdown.markdownItPlugins": true,
     "markdown.previewStyles": [
       "./notebook-out/katex.min.css",
       "./preview-styles/index.css"
     ],
-    "configuration": [
-      {
-        "title": "Markdown Math",
-        "properties": {
-          "markdown.math.enabled": {
-            "type": "boolean",
-            "default": true,
-            "description": "%config.markdown.math.enabled%"
-          }
+    "configuration": [{
+      "title": "Markdown Math",
+      "properties": {
+        "markdown.math.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "%config.markdown.math.enabled%"
         }
       }
-    ]
+    }]
   },
   "scripts": {
     "compile": "npm run build-notebook",
@@ -90,7 +83,7 @@
     "build-notebook": "node ./esbuild"
   },
   "dependencies": {
-    "@iktakahiro/markdown-it-katex": "https://github.com/mjbvz/markdown-it-katex.git"
+    "@iktakahiro/markdown-it-katex": "git://github.com/mjbvz/markdown-it-katex.git"
   },
   "devDependencies": {
     "@types/markdown-it": "^0.0.0",
